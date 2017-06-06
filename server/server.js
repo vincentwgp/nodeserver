@@ -28,17 +28,15 @@ wss.on('close', function close(ws) {
 });
 
 
-
-app.get("/getMessage",function(req,res){
-    var list=[
+app.get("/getUser.php",function(req,res){
+	var list=[
         {
             img:"/image/adam.jpg",
             name:"王浩",
             message:"哈哈",
             time:"22:00",
             count:1,
-            id:"1",
-
+            id:"1"
         },
         {
             img:"/image/ben.png",
@@ -74,12 +72,11 @@ app.get("/getMessage",function(req,res){
         }
     ]
     for(var i = 0;i<list.length;i++){
-        // console.log(list[i][count])
-        list[i].count = parseInt(Math.random()*10)
+    	// console.log(list[i][count])
+    	list[i].count = parseInt(Math.random()*10)
     }
-    res.send(list);
+	res.send(list);
 })
-
 app.post("/getMsg.php",function(req,res){
 	var id = req.body.id
 	// console.log(id)
