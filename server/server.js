@@ -343,7 +343,7 @@ app.get("/wsConnect.php",function(req,res){
 
 })
  
-app.set("port",8999);
+app.set("port",80);
 app.listen(app.get("port"),function(){
     console.log("服务器已启动...");
 })
